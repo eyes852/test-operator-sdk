@@ -1,0 +1,9 @@
+apiVersion: what.the.hell/v1alpha1
+kind: Tested
+metadata:
+  labels:
+    app.kubernetes.io/name: test-operator-sdk
+    app.kubernetes.io/managed-by: kustomize
+  name: tested-sample
+spec:
+  # TODO(user): Add fields here

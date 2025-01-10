@@ -1,0 +1,27 @@
+# permissions for end users to edit testeds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: test-operator-sdk
+    app.kubernetes.io/managed-by: kustomize
+  name: tested-editor-role
+rules:
+- apiGroups:
+  - what.the.hell
+  resources:
+  - testeds
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - what.the.hell
+  resources:
+  - testeds/status
+  verbs:
+  - get

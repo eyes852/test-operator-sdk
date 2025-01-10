@@ -1,0 +1,23 @@
+# permissions for end users to view testeds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: test-operator-sdk
+    app.kubernetes.io/managed-by: kustomize
+  name: tested-viewer-role
+rules:
+- apiGroups:
+  - what.the.hell
+  resources:
+  - testeds
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - what.the.hell
+  resources:
+  - testeds/status
+  verbs:
+  - get
